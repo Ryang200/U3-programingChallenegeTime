@@ -1,0 +1,33 @@
+#gradle build outputs... will cause issues when pushing to repository
+/build/
+.gradle/
+
+# IDE/editor config
+.idea/
+*.iml
+*.classpath
+*.project
+*.settings/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Compiled classes/jars
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+*.war
+*.ear
+
+# Environment files
+.env
+
+# VS Code settings (if using)
+.vscode/
+
+#Ignore classroom.yml file 
+.github/workflows/classroom.yml
