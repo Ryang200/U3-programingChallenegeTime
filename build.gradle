@@ -13,19 +13,18 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
 }
 
-
+// Replace the toolchain block with this so 11 (poral api container) and 17 (codespace)
 java {
-	toolchain {
-		languageVersion = JavaLanguageVersion.of(11) // Use Java 11
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
 }
 
-
 test {
-	useJUnitPlatform()
-	testLogging {
-		events "passed", "skipped", "failed"
-		exceptionFormat "full"  // Show full exception details on failure
-		showCauses true
-		showStackTraces true
-	}
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+        exceptionFormat "full"  // Show full exception details on failure
+        showCauses true
+        showStackTraces true
+    }
 }
